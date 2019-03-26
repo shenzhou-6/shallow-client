@@ -1,7 +1,8 @@
 <template>
     <a-layout-sider :trigger="null"
                     collapsible
-                    v-model="$store.state.layout_store.collapsed">
+                    v-model="$store.state.layout_store.collapsed"
+    width="256px">
         <div class="logo"></div>
         <sider-menu></sider-menu>
     </a-layout-sider>

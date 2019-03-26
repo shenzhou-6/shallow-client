@@ -3,7 +3,7 @@
             :key="props.menuInfo.key"
     >
     <span slot="title">
-      <a-icon type="mail"/><span>{{ props.menuInfo.title }}</span>
+      <a-icon :type="props.menuInfo.icon"/><span>{{ props.menuInfo.title }}</span>
     </span>
         <template v-for="item in props.menuInfo.children">
             <a-menu-item

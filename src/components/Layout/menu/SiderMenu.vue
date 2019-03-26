@@ -9,7 +9,7 @@
         >
             <template v-for="item in list">
                 <a-menu-item v-if="!item.children" :key="item.key">
-                    <a-icon type="pie-chart" />
+                    <a-icon :type="item.icon" />
                     <span>{{item.title}}</span>
                 </a-menu-item>
                 <sub-menu v-else :menu-info="item" :key="item.key"/>
@@ -32,9 +32,11 @@
                     {
                         key: '1',
                         title: 'Option 1',
+                        icon:''
                     }, {
                         key: '2',
                         title: 'Navigation 2',
+                        icon:'',
                         children: [
                             {
                                 key: '2.1',
