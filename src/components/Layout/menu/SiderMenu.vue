@@ -9,8 +9,10 @@
         >
             <template v-for="item in list">
                 <a-menu-item v-if="!item.children" :key="item.key">
-                    <a-icon :type="item.icon" />
-                    <span>{{item.title}}</span>
+                    <router-link :to="{name:item.key}">
+                        <a-icon :type="item.icon" />
+                        <span>{{item.title}}</span>
+                    </router-link>
                 </a-menu-item>
                 <sub-menu v-else :menu-info="item" :key="item.key"/>
             </template>
